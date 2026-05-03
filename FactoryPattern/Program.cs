@@ -5,10 +5,10 @@
         static void Main(string[] args)
         {
             Console.WriteLine("How many wheels does your vehicle have?");
-            var wheelCount = int.Parse(Console.ReadLine());
-            
-            var vehicle = VehicleFactory.GetVehicle(wheelCount);
+            int.TryParse(Console.ReadLine(), out int wheelCount);
+
+            IVehicle vehicle = VehicleFactory.GetVehicle(wheelCount);
             vehicle.Drive();
-        }
+           }
     }
 }

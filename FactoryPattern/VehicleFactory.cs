@@ -14,6 +14,6 @@ public static class VehicleFactory
                 return new BigRig();
             default:
                 return new Car();
-        }
+            }
     }
 }
